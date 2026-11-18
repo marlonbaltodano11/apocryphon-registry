@@ -28,9 +28,4 @@ jobs:
         run: npm run check-index
 
       - name: Validate with @apocryphon/cli
-        run: |
-          if npm view @apocryphon/cli version >/dev/null 2>&1; then
-            npx --yes @apocryphon/cli@latest validate --registry --strict
-          else
-            echo "::notice::@apocryphon/cli is not published yet; skipping CLI validation."
-          fi
+        run: npm run validate

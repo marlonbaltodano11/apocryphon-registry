@@ -6,7 +6,7 @@
   "scripts": {
     "generate-index": "node scripts/generate-index.mjs",
     "check-index": "node scripts/generate-index.mjs --check",
-    "validate": "npx --yes @apocryphon/cli@latest validate --registry --strict",
+    "validate": "bash scripts/validate-registry.sh",
     "check": "npm run check-index"
   },
   "devDependencies": {
