@@ -11,7 +11,7 @@
 
 ---
 
-34 skills · 10 packs · 62 curated tags.
+43 skills · 16 packs · 69 curated tags.
 
 This repository is the **source of truth** for Apocryphon's skill catalog. It is
 a plain Git repository: versioned, reviewable, distributable over SSH or HTTPS
@@ -59,14 +59,22 @@ apocryphon init --registry /path/to/apocryphon-registry
 | `ai-engineering` | 3 | Prompt design, RAG systems and LLM evaluation. |
 | `docs-communication` | 2 | Useful READMEs and architecture decision records. |
 | `starter` | 5 | A pragmatic starter pack for a new project: discipline, testing and a first security pass. |
+| `dotnet` | 3 | .NET 10 and C#: modern language conventions, Minimal APIs and xUnit TDD. |
+| `typescript-node` | 2 | Strict TypeScript and production Node service conventions. |
+| `python` | 2 | Modern Python project conventions plus pytest TDD. |
+| `nextjs` | 1 | Next.js App Router architecture and server/client boundaries. |
+| `postgres` | 1 | PostgreSQL schema design and index strategy. |
+| `personal-stack` | 9 | Opinionated defaults for TypeScript/Node, Python, .NET 10, Next.js and PostgreSQL. |
 
 ## Skills
 
-### Workflow (14)
+### Workflow (16)
 
 | Skill | Tags | What it does |
 | --- | --- | --- |
 | [`ai-llm-evals`](./skills/ai-llm-evals) | `ai`, `evals`, `testing` | Evaluación de sistemas LLM. Úsala cuando necesites medir calidad, regresiones o cambios de modelo o prompt.… |
+| [`dotnet-tdd-xunit`](./skills/dotnet-tdd-xunit) | `dotnet`, `csharp`, `tdd` | TDD en .NET 10 con xUnit. Úsala siempre que implementes una feature o corrijas un bug en C# y quieras… |
+| [`python-tdd-pytest`](./skills/python-tdd-pytest) | `python`, `tdd`, `testing` | TDD en Python con pytest. Úsala siempre que implementes una feature o corrijas un bug en Python y quieras… |
 | [`security-code-review`](./skills/security-code-review) | `security`, `code-review`, `appsec` | Revisión de seguridad de código. Úsala cuando revises PRs que tocan auth, input, SQL, archivos, HTTP o… |
 | [`testing-flaky-tests`](./skills/testing-flaky-tests) | `testing`, `flakiness`, `quality` | Diagnóstico de tests intermitentes. Úsala cuando un test falle de forma no determinista o bloquee CI.… |
 | [`testing-strategy`](./skills/testing-strategy) | `testing`, `quality` | Estrategia de pruebas para un proyecto o feature. Úsala cuando decidas qué tests escribir, cómo… |
@@ -81,7 +89,7 @@ apocryphon init --registry /path/to/apocryphon-registry
 | [`workflow-root-cause-debug`](./skills/workflow-root-cause-debug) | `debugging`, `workflow`, `quality` | Protocolo de depuración por causa raíz. Úsala siempre que algo falle y no sepas por qué (tests rojos, errores… |
 | [`workflow-test-first`](./skills/workflow-test-first) | `testing`, `tdd`, `workflow` | Ciclo TDD para features y bugs. Úsala cuando el usuario pida implementar algo verificable o corregir un bug y… |
 
-### Domain (17)
+### Domain (24)
 
 | Skill | Tags | What it does |
 | --- | --- | --- |
@@ -97,11 +105,18 @@ apocryphon init --registry /path/to/apocryphon-registry
 | [`devops-dockerfile`](./skills/devops-dockerfile) | `docker`, `devops`, `containers` | Dockerfiles de producción. Úsala cuando containerices una app o revises imágenes lentas, grandes o inseguras.… |
 | [`devops-github-actions`](./skills/devops-github-actions) | `github-actions`, `ci`, `devops` | Workflows de GitHub Actions. Úsala cuando crees o depures CI/CD, matrices, cachés, permisos o despliegues.… |
 | [`devops-secrets-management`](./skills/devops-secrets-management) | `secrets`, `security`, `devops` | Manejo de secretos. Úsala siempre que configures credenciales, variables de entorno, CI o rotación. Mantén… |
+| [`dotnet-minimal-api`](./skills/dotnet-minimal-api) | `dotnet`, `api`, `http` | APIs con ASP.NET Core Minimal APIs en .NET 10. Úsala siempre que crees endpoints, grupos de rutas,… |
+| [`dotnet-modern-csharp`](./skills/dotnet-modern-csharp) | `dotnet`, `csharp`, `backend` | Convenciones de C# moderno y .NET 10. Úsala siempre que crees o modifiques proyectos, APIs o librerías en C#… |
 | [`frontend-accessibility`](./skills/frontend-accessibility) | `accessibility`, `frontend`, `ui` | Accesibilidad web (WCAG). Úsala siempre que crees o modifiques UI, formularios, modales, navegación o… |
 | [`frontend-performance`](./skills/frontend-performance) | `performance`, `frontend`, `web-vitals` | Rendimiento web y Core Web Vitals. Úsala cuando una página cargue lenta, el bundle crezca o haya que… |
 | [`frontend-react-architecture`](./skills/frontend-react-architecture) | `react`, `frontend`, `architecture` | Arquitectura de aplicaciones React. Úsala cuando crees componentes, organices carpetas, gestiones estado o… |
+| [`nextjs-app-router`](./skills/nextjs-app-router) | `nextjs`, `react`, `frontend` | Next.js App Router. Úsala siempre que crees rutas, layouts, server/client components, data fetching o actions… |
+| [`node-service-conventions`](./skills/node-service-conventions) | `node`, `backend`, `typescript` | Servicios Node en producción. Úsala siempre que crees o modifiques un servicio, CLI o job en Node. Configura… |
+| [`postgres-schema-design`](./skills/postgres-schema-design) | `postgres`, `database`, `design` | Diseño de esquemas PostgreSQL. Úsala siempre que crees o modifiques tablas, tipos, constraints o índices en… |
+| [`python-project-conventions`](./skills/python-project-conventions) | `python`, `backend`, `quality` | Convenciones de proyectos Python modernos. Úsala siempre que crees o revises paquetes, servicios o scripts en… |
 | [`security-threat-model`](./skills/security-threat-model) | `security`, `threat-model`, `architecture` | Modelado de amenazas. Úsala siempre que diseñes una feature, API o arquitectura que maneje datos sensibles,… |
 | [`testing-playwright-e2e`](./skills/testing-playwright-e2e) | `playwright`, `testing`, `e2e` | Tests E2E con Playwright. Úsala cuando escribas flujos críticos de usuario, formularios o integraciones entre… |
+| [`typescript-strict-patterns`](./skills/typescript-strict-patterns) | `typescript`, `node`, `quality` | TypeScript estricto en Node. Úsala siempre que crees o revises código TypeScript, tipos de dominio o APIs… |
 
 ### Meta (3)
 

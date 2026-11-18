@@ -61,6 +61,10 @@
         "label": "Containers"
       },
       {
+        "id": "csharp",
+        "label": "C#"
+      },
+      {
         "id": "database",
         "label": "Databases"
       },
@@ -95,6 +99,10 @@
       {
         "id": "docs",
         "label": "Documentation"
+      },
+      {
+        "id": "dotnet",
+        "label": ".NET"
       },
       {
         "id": "e2e",
@@ -149,6 +157,14 @@
         "label": "Migrations"
       },
       {
+        "id": "nextjs",
+        "label": "Next.js"
+      },
+      {
+        "id": "node",
+        "label": "Node.js"
+      },
+      {
         "id": "observability",
         "label": "Observability"
       },
@@ -173,8 +189,16 @@
         "label": "Playwright"
       },
       {
+        "id": "postgres",
+        "label": "PostgreSQL"
+      },
+      {
         "id": "prompts",
         "label": "Prompts"
+      },
+      {
+        "id": "python",
+        "label": "Python"
       },
       {
         "id": "quality",
@@ -243,6 +267,10 @@
       {
         "id": "triage",
         "label": "Triage"
+      },
+      {
+        "id": "typescript",
+        "label": "TypeScript"
       },
       {
         "id": "ui",
@@ -347,6 +375,54 @@
         "testing-strategy",
         "security-code-review",
         "docs-readme"
+      ]
+    },
+    "dotnet": {
+      "description": ".NET 10 and C#: modern language conventions, Minimal APIs and xUnit TDD.",
+      "skills": [
+        "dotnet-modern-csharp",
+        "dotnet-tdd-xunit",
+        "dotnet-minimal-api"
+      ]
+    },
+    "typescript-node": {
+      "description": "Strict TypeScript and production Node service conventions.",
+      "skills": [
+        "typescript-strict-patterns",
+        "node-service-conventions"
+      ]
+    },
+    "python": {
+      "description": "Modern Python project conventions plus pytest TDD.",
+      "skills": [
+        "python-project-conventions",
+        "python-tdd-pytest"
+      ]
+    },
+    "nextjs": {
+      "description": "Next.js App Router architecture and server/client boundaries.",
+      "skills": [
+        "nextjs-app-router"
+      ]
+    },
+    "postgres": {
+      "description": "PostgreSQL schema design and index strategy.",
+      "skills": [
+        "postgres-schema-design"
+      ]
+    },
+    "personal-stack": {
+      "description": "Opinionated defaults for TypeScript/Node, Python, .NET 10, Next.js and PostgreSQL.",
+      "skills": [
+        "dotnet-modern-csharp",
+        "dotnet-tdd-xunit",
+        "dotnet-minimal-api",
+        "typescript-strict-patterns",
+        "node-service-conventions",
+        "python-project-conventions",
+        "python-tdd-pytest",
+        "nextjs-app-router",
+        "postgres-schema-design"
       ]
     }
   },
@@ -531,6 +607,45 @@
       ]
     },
     {
+      "id": "dotnet-minimal-api",
+      "version": "1.0.0",
+      "description": "APIs con ASP.NET Core Minimal APIs en .NET 10. Úsala siempre que crees endpoints, grupos de rutas, validación, autenticación u OpenAPI en .NET. No la uses para MVC clásico ni para APIs en otros lenguajes.",
+      "category": "domain",
+      "path": "skills/dotnet-minimal-api",
+      "tags": [
+        "dotnet",
+        "api",
+        "http",
+        "backend"
+      ]
+    },
+    {
+      "id": "dotnet-modern-csharp",
+      "version": "1.0.0",
+      "description": "Convenciones de C# moderno y .NET 10. Úsala siempre que crees o modifiques proyectos, APIs o librerías en C# y .NET. Cubre nullable, async, analyzers, configuración, logging y APIs. No la uses para scripts sueltos ni para otros lenguajes.",
+      "category": "domain",
+      "path": "skills/dotnet-modern-csharp",
+      "tags": [
+        "dotnet",
+        "csharp",
+        "backend",
+        "quality"
+      ]
+    },
+    {
+      "id": "dotnet-tdd-xunit",
+      "version": "1.0.0",
+      "description": "TDD en .NET 10 con xUnit. Úsala siempre que implementes una feature o corrijas un bug en C# y quieras escribir tests primero. Ciclo red-green-refactor con `dotnet test`, xUnit, fixtures y WebApplicationFactory. No la uses para tests E2E de navegador.",
+      "category": "workflow",
+      "path": "skills/dotnet-tdd-xunit",
+      "tags": [
+        "dotnet",
+        "csharp",
+        "tdd",
+        "testing"
+      ]
+    },
+    {
       "id": "frontend-accessibility",
       "version": "1.0.0",
       "description": "Accesibilidad web (WCAG). Úsala siempre que crees o modifiques UI, formularios, modales, navegación o componentes interactivos. Verifica teclado, foco, semántica, contraste y lectores de pantalla. No la uses para auditorías legales completas.",
@@ -576,6 +691,66 @@
         "meta",
         "skills",
         "authoring"
+      ]
+    },
+    {
+      "id": "nextjs-app-router",
+      "version": "1.0.0",
+      "description": "Next.js App Router. Úsala siempre que crees rutas, layouts, server/client components, data fetching o actions en Next.js. Define caché, revalidación y límites server/client. No la uses para React sin Next.js.",
+      "category": "domain",
+      "path": "skills/nextjs-app-router",
+      "tags": [
+        "nextjs",
+        "react",
+        "frontend"
+      ]
+    },
+    {
+      "id": "node-service-conventions",
+      "version": "1.0.0",
+      "description": "Servicios Node en producción. Úsala siempre que crees o modifiques un servicio, CLI o job en Node. Configura ESM, configuración validada, logs estructurados, apagado graceful y healthchecks. No la uses para scripts de una sola vez.",
+      "category": "domain",
+      "path": "skills/node-service-conventions",
+      "tags": [
+        "node",
+        "backend",
+        "typescript"
+      ]
+    },
+    {
+      "id": "postgres-schema-design",
+      "version": "1.0.0",
+      "description": "Diseño de esquemas PostgreSQL. Úsala siempre que crees o modifiques tablas, tipos, constraints o índices en Postgres. Define claves, nulabilidad, constraints e índices según el acceso. No la uses para otros motores sin revisar diferencias.",
+      "category": "domain",
+      "path": "skills/postgres-schema-design",
+      "tags": [
+        "postgres",
+        "database",
+        "design"
+      ]
+    },
+    {
+      "id": "python-project-conventions",
+      "version": "1.0.0",
+      "description": "Convenciones de proyectos Python modernos. Úsala siempre que crees o revises paquetes, servicios o scripts en Python. Cubre pyproject, ruff, tipos, settings, logging y tests. No la uses para notebooks exploratorios.",
+      "category": "domain",
+      "path": "skills/python-project-conventions",
+      "tags": [
+        "python",
+        "backend",
+        "quality"
+      ]
+    },
+    {
+      "id": "python-tdd-pytest",
+      "version": "1.0.0",
+      "description": "TDD en Python con pytest. Úsala siempre que implementes una feature o corrijas un bug en Python y quieras tests primero. Ciclo red-green-refactor con fixtures, parametrización y cobertura. No la uses para tests E2E de UI.",
+      "category": "workflow",
+      "path": "skills/python-tdd-pytest",
+      "tags": [
+        "python",
+        "tdd",
+        "testing"
       ]
     },
     {
@@ -634,6 +809,18 @@
       "path": "skills/testing-strategy",
       "tags": [
         "testing",
+        "quality"
+      ]
+    },
+    {
+      "id": "typescript-strict-patterns",
+      "version": "1.0.0",
+      "description": "TypeScript estricto en Node. Úsala siempre que crees o revises código TypeScript, tipos de dominio o APIs internas. Activa strict, evita `any`, usa uniones discriminadas y validación en runtime. No la uses para snippets de navegador sin build.",
+      "category": "domain",
+      "path": "skills/typescript-strict-patterns",
+      "tags": [
+        "typescript",
+        "node",
         "quality"
       ]
     },

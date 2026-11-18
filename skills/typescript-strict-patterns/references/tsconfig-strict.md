@@ -1,0 +1,24 @@
+# tsconfig base
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  }
+}
+```
+
+Unión discriminada:
+
+```ts
+type Result<T> =
+  | { ok: true; value: T }
+  | { ok: false; error: string }
+```
