@@ -21,7 +21,10 @@ and metadata stay portable across Claude Code, Cursor and OpenCode.
 ## Use the catalog
 
 ```bash
-# Connect Apocryphon to this registry
+# This is the default catalog: a plain `apocryphon init` connects to it
+apocryphon init
+
+# You can also point explicitly at this repository
 apocryphon init --registry git@github.com:marlonbaltodano11/apocryphon-registry.git
 
 # Explore
@@ -125,6 +128,34 @@ apocryphon init --registry /path/to/apocryphon-registry
 | [`docs-adr`](./skills/docs-adr) | `docs`, `adr`, `architecture` | Registro de decisiones de arquitectura (ADR). Úsala cuando tomes una decisión técnica relevante o cambies una… |
 | [`docs-readme`](./skills/docs-readme) | `docs`, `readme` | READMEs útiles. Úsala cuando crees un proyecto o detectes que el README no permite empezar. Incluye qué es,… |
 | [`meta-skill-authoring`](./skills/meta-skill-authoring) | `meta`, `skills`, `authoring` | Autoría de skills para Apocryphon. Úsala cuando crees o edites una SKILL.md en este catálogo. Valida… |
+
+## Using a fork or a private registry
+
+A single source is active at a time. Apocryphon keeps the official catalog as
+the default, and you can switch to a fork, a local checkout or an Azure DevOps
+repository without uninstalling anything:
+
+```bash
+apocryphon registry show
+apocryphon registry use ~/dev/apocryphon-registry
+apocryphon registry use git@ssh.dev.azure.com:v3/org/project/skills
+apocryphon registry use <url> --ref v1.0.0
+apocryphon registry default
+```
+
+A compatible registry only needs:
+
+```text
+my-registry/
+├── registry.json
+└── skills/<id>/SKILL.md
+```
+
+`registry.json` must declare `name`, `version: 1`, `skills` (with `id` and
+`path`) and optionally `packs` and `taxonomy`. Git sources are cloned into
+`~/.apocryphon/registries/<hash>/`; switching sources never deletes installed
+skills, local edits, backups or project activations. Active packs keep their
+definitions even if the new catalog does not include them.
 
 ## Skill contract
 
