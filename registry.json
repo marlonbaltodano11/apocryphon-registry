@@ -1,0 +1,123 @@
+{
+  "name": "apocryphon-registry",
+  "version": 1,
+  "taxonomy": {
+    "categories": [
+      "domain",
+      "workflow",
+      "meta"
+    ],
+    "tags": [
+      {
+        "id": "planning",
+        "label": "Planning",
+        "description": "Read-only planning and task breakdown"
+      },
+      {
+        "id": "discipline",
+        "label": "Discipline",
+        "description": "Operational workflows that keep agents honest"
+      },
+      {
+        "id": "read-only",
+        "label": "Read-only",
+        "description": "Investigation without edits"
+      },
+      {
+        "id": "git",
+        "label": "Git",
+        "description": "Git workflows and conventions"
+      },
+      {
+        "id": "commits",
+        "label": "Commits",
+        "description": "Atomic, semantic commits"
+      },
+      {
+        "id": "review",
+        "label": "Code review",
+        "description": "Reviewing PRs and feedback"
+      },
+      {
+        "id": "triage",
+        "label": "Triage",
+        "description": "Classifying review findings"
+      },
+      {
+        "id": "http",
+        "label": "HTTP",
+        "description": "HTTP APIs and services"
+      },
+      {
+        "id": "api",
+        "label": "APIs",
+        "description": "API design"
+      },
+      {
+        "id": "errors",
+        "label": "Error handling",
+        "description": "Error envelopes and failure handling"
+      }
+    ]
+  },
+  "packs": {
+    "core-discipline": {
+      "description": "Operational discipline for native IDEs/CLIs: plan in read-only mode, commit atomically and triage reviews before editing.",
+      "skills": [
+        "workflow-read-only-plan",
+        "workflow-atomic-commits",
+        "workflow-review-triage"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "id": "api-error-handling",
+      "version": "1.0.0",
+      "description": "Convenciones para diseñar y revisar respuestas de error en APIs HTTP. Úsala siempre que el usuario cree o modifique endpoints, handlers o middlewares de error, o cuando aparezcan archivos como routes/, controllers/, handlers/ o middleware/. Exige un envelope de error consistente, códigos estables y logs sin datos sensibles. No la uses para errores de validación de formularios en el cliente ni para excepciones internas de un script.",
+      "category": "domain",
+      "path": "skills/api-error-handling",
+      "tags": [
+        "http",
+        "api",
+        "errors"
+      ]
+    },
+    {
+      "id": "workflow-atomic-commits",
+      "version": "1.0.0",
+      "description": "Divide el trabajo en commits semánticos atómicos y verifica cada paso. Úsala cuando implementes una tarea ya planificada con varios pasos, cuando el usuario pida commits pequeños o cuando lleves más de tres archivos modificados sin commitear. Cada paso debe compilar, pasar tests y tener un mensaje Conventional Commits. No la uses para exploración sin cambios de código.",
+      "category": "workflow",
+      "path": "skills/workflow-atomic-commits",
+      "tags": [
+        "git",
+        "commits",
+        "discipline"
+      ]
+    },
+    {
+      "id": "workflow-read-only-plan",
+      "version": "1.0.0",
+      "description": "Protocolo de planificación en solo lectura. Úsala siempre que el usuario pida una funcionalidad, un refactor o una corrección no trivial (varios archivos, cambios de arquitectura o migraciones) antes de editar código. Investiga el repositorio, propone fases atómicas con archivos afectados y comando de verificación, y espera aprobación explícita. No la uses para preguntas conceptuales ni para cambios de una línea.",
+      "category": "workflow",
+      "path": "skills/workflow-read-only-plan",
+      "tags": [
+        "planning",
+        "discipline",
+        "read-only"
+      ]
+    },
+    {
+      "id": "workflow-review-triage",
+      "version": "1.0.0",
+      "description": "Triaje de comentarios de code review. Úsala siempre que el usuario pegue comentarios de PR, hallazgos de auditoría o feedback externo y pida aplicarlos. Contrasta cada hallazgo contra el código real, clasifícalo como Válido, Opcional o Falso positivo en una tabla y espera la selección del usuario antes de editar. No la uses para redactar un review nuevo desde cero.",
+      "category": "workflow",
+      "path": "skills/workflow-review-triage",
+      "tags": [
+        "review",
+        "triage",
+        "discipline"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "apocryphon-registry",
+  "private": true,
+  "type": "module",
+  "description": "Official skill catalog for Apocryphon",
+  "scripts": {
+    "generate-index": "node scripts/generate-index.mjs",
+    "check-index": "node scripts/generate-index.mjs --check",
+    "validate": "npx --yes @apocryphon/cli@latest validate --registry --strict",
+    "check": "npm run check-index"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
