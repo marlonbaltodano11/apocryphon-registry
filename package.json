@@ -11,5 +11,13 @@
   },
   "devDependencies": {
     "gray-matter": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonbaltodano11/apocryphon-registry.git"
+  },
+  "homepage": "https://github.com/marlonbaltodano11/apocryphon-registry#readme",
+  "bugs": {
+    "url": "https://github.com/marlonbaltodano11/apocryphon-registry/issues"
   }
 }
