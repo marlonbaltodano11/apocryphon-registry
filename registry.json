@@ -17,10 +17,6 @@
         "label": "ADRs"
       },
       {
-        "id": "ai",
-        "label": "AI"
-      },
-      {
         "id": "api",
         "label": "APIs"
       },
@@ -33,10 +29,6 @@
         "label": "Architecture"
       },
       {
-        "id": "auth",
-        "label": "Authentication"
-      },
-      {
         "id": "authoring",
         "label": "Authoring"
       },
@@ -45,20 +37,8 @@
         "label": "Backend"
       },
       {
-        "id": "ci",
-        "label": "CI"
-      },
-      {
         "id": "code-review",
         "label": "Code review"
-      },
-      {
-        "id": "commits",
-        "label": "Commits"
-      },
-      {
-        "id": "containers",
-        "label": "Containers"
       },
       {
         "id": "csharp",
@@ -73,28 +53,12 @@
         "label": "Debugging"
       },
       {
-        "id": "dependencies",
-        "label": "Dependencies"
-      },
-      {
-        "id": "deployment",
-        "label": "Deployment"
-      },
-      {
         "id": "design",
         "label": "Design"
       },
       {
-        "id": "devops",
-        "label": "DevOps"
-      },
-      {
         "id": "discipline",
         "label": "Discipline"
-      },
-      {
-        "id": "docker",
-        "label": "Docker"
       },
       {
         "id": "docs",
@@ -109,18 +73,6 @@
         "label": "End-to-end"
       },
       {
-        "id": "errors",
-        "label": "Error handling"
-      },
-      {
-        "id": "evals",
-        "label": "Evals"
-      },
-      {
-        "id": "flakiness",
-        "label": "Flakiness"
-      },
-      {
         "id": "frontend",
         "label": "Frontend"
       },
@@ -129,52 +81,16 @@
         "label": "Git"
       },
       {
-        "id": "github-actions",
-        "label": "GitHub Actions"
-      },
-      {
         "id": "http",
         "label": "HTTP"
-      },
-      {
-        "id": "incident",
-        "label": "Incident response"
-      },
-      {
-        "id": "llm",
-        "label": "LLMs"
-      },
-      {
-        "id": "logging",
-        "label": "Logging"
       },
       {
         "id": "meta",
         "label": "Meta"
       },
       {
-        "id": "migrations",
-        "label": "Migrations"
-      },
-      {
         "id": "nextjs",
         "label": "Next.js"
-      },
-      {
-        "id": "node",
-        "label": "Node.js"
-      },
-      {
-        "id": "observability",
-        "label": "Observability"
-      },
-      {
-        "id": "onboarding",
-        "label": "Onboarding"
-      },
-      {
-        "id": "operations",
-        "label": "Operations"
       },
       {
         "id": "performance",
@@ -185,16 +101,12 @@
         "label": "Planning"
       },
       {
-        "id": "playwright",
-        "label": "Playwright"
-      },
-      {
         "id": "postgres",
         "label": "PostgreSQL"
       },
       {
-        "id": "prompts",
-        "label": "Prompts"
+        "id": "property-based-testing",
+        "label": "Property-based testing"
       },
       {
         "id": "python",
@@ -205,44 +117,16 @@
         "label": "Quality"
       },
       {
-        "id": "rag",
-        "label": "RAG"
-      },
-      {
         "id": "react",
         "label": "React"
-      },
-      {
-        "id": "read-only",
-        "label": "Read-only"
-      },
-      {
-        "id": "readme",
-        "label": "README"
       },
       {
         "id": "refactor",
         "label": "Refactoring"
       },
       {
-        "id": "release",
-        "label": "Release"
-      },
-      {
-        "id": "reliability",
-        "label": "Reliability"
-      },
-      {
-        "id": "retrieval",
-        "label": "Retrieval"
-      },
-      {
         "id": "review",
-        "label": "Code review"
-      },
-      {
-        "id": "secrets",
-        "label": "Secrets"
+        "label": "Review"
       },
       {
         "id": "security",
@@ -261,24 +145,8 @@
         "label": "Testing"
       },
       {
-        "id": "threat-model",
-        "label": "Threat modeling"
-      },
-      {
-        "id": "triage",
-        "label": "Triage"
-      },
-      {
-        "id": "typescript",
-        "label": "TypeScript"
-      },
-      {
         "id": "ui",
         "label": "UI"
-      },
-      {
-        "id": "web-vitals",
-        "label": "Web Vitals"
       },
       {
         "id": "workflow",
@@ -287,646 +155,127 @@
     ]
   },
   "packs": {
-    "core-discipline": {
-      "description": "Operational discipline for native IDEs/CLIs: plan in read-only mode, commit atomically and triage reviews before editing.",
+    "core": {
+      "description": "Daily engineering discipline: test-first work, diagnosis, planning, review, feedback, verification, and isolated workspaces.",
       "skills": [
-        "workflow-read-only-plan",
-        "workflow-atomic-commits",
-        "workflow-review-triage"
+        "tdd",
+        "diagnosing-bugs",
+        "writing-plans",
+        "verification-before-completion",
+        "code-review",
+        "receiving-code-review",
+        "using-git-worktrees"
       ]
     },
-    "workflow-pro": {
-      "description": "Deeper execution workflows: root-cause debugging, safe refactors, TDD, releases, dependency upgrades, incidents and onboarding.",
+    "design": {
+      "description": "Deep-module design and active domain modeling.",
       "skills": [
-        "workflow-root-cause-debug",
-        "workflow-refactor-safely",
-        "workflow-test-first",
-        "workflow-release-checklist",
-        "workflow-dependency-upgrade",
-        "workflow-incident-response",
-        "workflow-codebase-onboarding"
+        "codebase-design",
+        "domain-modeling"
       ]
     },
-    "backend-api": {
-      "description": "Backend and API foundations: REST design, auth, migrations, query performance, observability and error envelopes.",
+    "web": {
+      "description": "React and Next.js performance, component composition, and web interface quality.",
       "skills": [
-        "api-error-handling",
-        "api-rest-design",
-        "api-auth-sessions",
-        "db-migrations-safe",
-        "db-query-performance",
-        "backend-observability"
-      ]
-    },
-    "frontend-web": {
-      "description": "Frontend quality: React architecture, accessibility and web performance.",
-      "skills": [
-        "frontend-react-architecture",
-        "frontend-accessibility",
-        "frontend-performance"
-      ]
-    },
-    "testing-quality": {
-      "description": "Testing strategy, Playwright E2E and flaky-test diagnosis, paired with test-first development.",
-      "skills": [
-        "testing-strategy",
-        "testing-playwright-e2e",
-        "testing-flaky-tests",
-        "workflow-test-first"
-      ]
-    },
-    "devops-delivery": {
-      "description": "Container images, CI workflows, safe deployments and secret management.",
-      "skills": [
-        "devops-dockerfile",
-        "devops-github-actions",
-        "devops-deploy-safety",
-        "devops-secrets-management"
-      ]
-    },
-    "security-foundations": {
-      "description": "Threat modeling, security-focused code review and secret hygiene.",
-      "skills": [
-        "security-threat-model",
-        "security-code-review",
-        "devops-secrets-management"
-      ]
-    },
-    "ai-engineering": {
-      "description": "Prompt design, RAG systems and LLM evaluation.",
-      "skills": [
-        "ai-prompt-engineering",
-        "ai-rag-design",
-        "ai-llm-evals"
-      ]
-    },
-    "docs-communication": {
-      "description": "Useful READMEs and architecture decision records.",
-      "skills": [
-        "docs-readme",
-        "docs-adr"
-      ]
-    },
-    "starter": {
-      "description": "A pragmatic starter pack for a new project: discipline, testing and a first security pass.",
-      "skills": [
-        "workflow-read-only-plan",
-        "workflow-atomic-commits",
-        "testing-strategy",
-        "security-code-review",
-        "docs-readme"
+        "react-best-practices",
+        "composition-patterns",
+        "web-interface-guidelines",
+        "next-dev-loop"
       ]
     },
     "dotnet": {
-      "description": ".NET 10 and C#: modern language conventions, Minimal APIs and xUnit TDD.",
+      "description": "ASP.NET Core Web APIs and correct .NET test execution.",
       "skills": [
-        "dotnet-modern-csharp",
-        "dotnet-tdd-xunit",
-        "dotnet-minimal-api"
-      ]
-    },
-    "typescript-node": {
-      "description": "Strict TypeScript and production Node service conventions.",
-      "skills": [
-        "typescript-strict-patterns",
-        "node-service-conventions"
+        "dotnet-webapi",
+        "dotnet-run-tests",
+        "tdd"
       ]
     },
     "python": {
-      "description": "Modern Python project conventions plus pytest TDD.",
+      "description": "Modern Python tooling and test-driven development.",
       "skills": [
-        "python-project-conventions",
-        "python-tdd-pytest"
-      ]
-    },
-    "nextjs": {
-      "description": "Next.js App Router architecture and server/client boundaries.",
-      "skills": [
-        "nextjs-app-router"
+        "modern-python",
+        "tdd"
       ]
     },
     "postgres": {
-      "description": "PostgreSQL schema design and index strategy.",
+      "description": "Postgres schema, query, index, lock, connection, and security practices.",
       "skills": [
-        "postgres-schema-design"
+        "postgres-best-practices"
+      ]
+    },
+    "quality": {
+      "description": "Independent code review, property-based testing, and security-focused differential review.",
+      "skills": [
+        "property-based-testing",
+        "code-review",
+        "differential-review"
       ]
     },
     "personal-stack": {
-      "description": "Opinionated defaults for TypeScript/Node, Python, .NET 10, Next.js and PostgreSQL.",
+      "description": "Curated defaults for TypeScript/Node, React/Next.js, .NET, Python, and PostgreSQL.",
       "skills": [
-        "dotnet-modern-csharp",
-        "dotnet-tdd-xunit",
-        "dotnet-minimal-api",
-        "typescript-strict-patterns",
-        "node-service-conventions",
-        "python-project-conventions",
-        "python-tdd-pytest",
-        "nextjs-app-router",
-        "postgres-schema-design"
+        "tdd",
+        "dotnet-webapi",
+        "dotnet-run-tests",
+        "react-best-practices",
+        "web-interface-guidelines",
+        "next-dev-loop",
+        "postgres-best-practices",
+        "modern-python"
+      ]
+    },
+    "meta": {
+      "description": "Writing skills, AGENTS.md, and other documents consumed by coding agents.",
+      "skills": [
+        "writing-for-agents"
       ]
     }
   },
   "skills": [
     {
-      "id": "ai-llm-evals",
+      "id": "code-review",
       "version": "1.0.0",
-      "description": "Evaluación de sistemas LLM. Úsala cuando necesites medir calidad, regresiones o cambios de modelo o prompt. Define datasets, métricas y umbrales. No la uses para evaluar una respuesta aislada.",
+      "description": "Two-axis review of a branch, PR, or work-in-progress diff against a fixed point: standards compliance and spec fidelity. Use when asked to review changes, review since a commit or branch, or check whether a diff implements the originating issue without scope creep. Do not use for reviewing generated code you cannot inspect or for a single line whose behavior is already covered by an existing review.",
       "category": "workflow",
-      "path": "skills/ai-llm-evals",
+      "path": "skills/code-review",
       "tags": [
-        "ai",
-        "evals",
-        "testing"
-      ]
-    },
-    {
-      "id": "ai-prompt-engineering",
-      "version": "1.0.0",
-      "description": "Diseño de prompts para LLMs. Úsala cuando crees o mejores prompts de producto, agentes o extracción de datos. Define rol, entradas, salida estructurada, ejemplos y criterios de evaluación. No la uses para prompts triviales de una línea.",
-      "category": "domain",
-      "path": "skills/ai-prompt-engineering",
-      "tags": [
-        "ai",
-        "prompts",
-        "llm"
-      ]
-    },
-    {
-      "id": "ai-rag-design",
-      "version": "1.0.0",
-      "description": "Diseño de RAG. Úsala cuando construyas búsqueda semántica, asistentes sobre documentos o recuperación aumentada. Define chunking, embeddings, retrieval, citas y evaluación. No la uses para datos estructurados con SQL simple.",
-      "category": "domain",
-      "path": "skills/ai-rag-design",
-      "tags": [
-        "ai",
-        "rag",
-        "retrieval"
-      ]
-    },
-    {
-      "id": "api-auth-sessions",
-      "version": "1.0.0",
-      "description": "Autenticación y sesiones seguras. Úsala siempre que implementes login, tokens, cookies, refresh, permisos o cierres de sesión. Verifica almacenamiento, rotación, CSRF, expiración y autorización por recurso. No la uses para integraciones de terceros sin revisar su contrato.",
-      "category": "domain",
-      "path": "skills/api-auth-sessions",
-      "tags": [
-        "auth",
-        "security",
-        "api"
-      ]
-    },
-    {
-      "id": "api-error-handling",
-      "version": "1.0.0",
-      "description": "Convenciones para diseñar y revisar respuestas de error en APIs HTTP. Úsala siempre que el usuario cree o modifique endpoints, handlers o middlewares de error, o cuando aparezcan archivos como routes/, controllers/, handlers/ o middleware/. Exige un envelope de error consistente, códigos estables y logs sin datos sensibles. No la uses para errores de validación de formularios en el cliente ni para excepciones internas de un script.",
-      "category": "domain",
-      "path": "skills/api-error-handling",
-      "tags": [
-        "http",
-        "api",
-        "errors"
-      ]
-    },
-    {
-      "id": "api-rest-design",
-      "version": "1.0.0",
-      "description": "Diseño de APIs REST consistentes. Úsala siempre que crees o modifiques endpoints, recursos, paginación, versionado o contratos HTTP. Define recursos, estados, errores, paginación e idempotencia antes de implementar. No la uses para RPC interno ni para errores puntuales (usa api- error-handling).",
-      "category": "domain",
-      "path": "skills/api-rest-design",
-      "tags": [
-        "api",
-        "http",
-        "design"
-      ]
-    },
-    {
-      "id": "backend-observability",
-      "version": "1.0.0",
-      "description": "Observabilidad en servicios backend. Úsala siempre que añadas endpoints, jobs o integraciones y necesites diagnosticar producción. Implementa logs estructurados, request IDs, métricas y trazas. No la uses para instrumentar scripts locales.",
-      "category": "domain",
-      "path": "skills/backend-observability",
-      "tags": [
-        "observability",
-        "logging",
-        "backend"
-      ]
-    },
-    {
-      "id": "db-migrations-safe",
-      "version": "1.0.0",
-      "description": "Migraciones de base de datos sin downtime. Úsala siempre que cambies esquema, índices, constraints o hagas backfills en una base con datos reales. Planifica compatibilidad, bloqueos y rollback. No la uses para prototipos locales sin datos.",
-      "category": "domain",
-      "path": "skills/db-migrations-safe",
-      "tags": [
-        "database",
-        "migrations",
-        "backend"
-      ]
-    },
-    {
-      "id": "db-query-performance",
-      "version": "1.0.0",
-      "description": "Optimización de consultas y esquemas. Úsala cuando una consulta sea lenta, haya N+1, falte un índice o la base sea el cuello de botella. Mide con EXPLAIN antes y después; no optimices por intuición. No la uses para tuning de infraestructura sin evidencia.",
-      "category": "domain",
-      "path": "skills/db-query-performance",
-      "tags": [
-        "database",
-        "performance",
-        "backend"
-      ]
-    },
-    {
-      "id": "devops-deploy-safety",
-      "version": "1.0.0",
-      "description": "Despliegues seguros y rollback. Úsala cuando publiques a producción, cambies infraestructura o migres datos. Define healthchecks, estrategia de rollback y flags. No la uses para publicar librerías npm (usa workflow-release-checklist).",
-      "category": "domain",
-      "path": "skills/devops-deploy-safety",
-      "tags": [
-        "deployment",
-        "devops",
-        "reliability"
-      ]
-    },
-    {
-      "id": "devops-dockerfile",
-      "version": "1.0.0",
-      "description": "Dockerfiles de producción. Úsala cuando containerices una app o revises imágenes lentas, grandes o inseguras. Multi-stage, non-root, cache y healthcheck. No la uses para imágenes de desarrollo desechables.",
-      "category": "domain",
-      "path": "skills/devops-dockerfile",
-      "tags": [
-        "docker",
-        "devops",
-        "containers"
-      ]
-    },
-    {
-      "id": "devops-github-actions",
-      "version": "1.0.0",
-      "description": "Workflows de GitHub Actions. Úsala cuando crees o depures CI/CD, matrices, cachés, permisos o despliegues. Define permisos mínimos, cache y concurrencia. No la uses para lógica de negocio.",
-      "category": "domain",
-      "path": "skills/devops-github-actions",
-      "tags": [
-        "github-actions",
-        "ci",
-        "devops"
-      ]
-    },
-    {
-      "id": "devops-secrets-management",
-      "version": "1.0.0",
-      "description": "Manejo de secretos. Úsala siempre que configures credenciales, variables de entorno, CI o rotación. Mantén secretos fuera del repo y de los logs. No la uses para datos públicos.",
-      "category": "domain",
-      "path": "skills/devops-secrets-management",
-      "tags": [
-        "secrets",
-        "security",
-        "devops"
-      ]
-    },
-    {
-      "id": "docs-adr",
-      "version": "1.0.0",
-      "description": "Registro de decisiones de arquitectura (ADR). Úsala cuando tomes una decisión técnica relevante o cambies una existente. Documenta contexto, opciones, decisión y consecuencias. No la uses para tareas operativas.",
-      "category": "meta",
-      "path": "skills/docs-adr",
-      "tags": [
-        "docs",
-        "adr",
-        "architecture"
-      ]
-    },
-    {
-      "id": "docs-readme",
-      "version": "1.0.0",
-      "description": "READMEs útiles. Úsala cuando crees un proyecto o detectes que el README no permite empezar. Incluye qué es, quickstart, comandos, configuración y troubleshooting. No la uses para documentación de API extensa.",
-      "category": "meta",
-      "path": "skills/docs-readme",
-      "tags": [
-        "docs",
-        "readme"
-      ]
-    },
-    {
-      "id": "dotnet-minimal-api",
-      "version": "1.0.0",
-      "description": "APIs con ASP.NET Core Minimal APIs en .NET 10. Úsala siempre que crees endpoints, grupos de rutas, validación, autenticación u OpenAPI en .NET. No la uses para MVC clásico ni para APIs en otros lenguajes.",
-      "category": "domain",
-      "path": "skills/dotnet-minimal-api",
-      "tags": [
-        "dotnet",
-        "api",
-        "http",
-        "backend"
-      ]
-    },
-    {
-      "id": "dotnet-modern-csharp",
-      "version": "1.0.0",
-      "description": "Convenciones de C# moderno y .NET 10. Úsala siempre que crees o modifiques proyectos, APIs o librerías en C# y .NET. Cubre nullable, async, analyzers, configuración, logging y APIs. No la uses para scripts sueltos ni para otros lenguajes.",
-      "category": "domain",
-      "path": "skills/dotnet-modern-csharp",
-      "tags": [
-        "dotnet",
-        "csharp",
-        "backend",
-        "quality"
-      ]
-    },
-    {
-      "id": "dotnet-tdd-xunit",
-      "version": "1.0.0",
-      "description": "TDD en .NET 10 con xUnit. Úsala siempre que implementes una feature o corrijas un bug en C# y quieras escribir tests primero. Ciclo red-green-refactor con `dotnet test`, xUnit, fixtures y WebApplicationFactory. No la uses para tests E2E de navegador.",
-      "category": "workflow",
-      "path": "skills/dotnet-tdd-xunit",
-      "tags": [
-        "dotnet",
-        "csharp",
-        "tdd",
-        "testing"
-      ]
-    },
-    {
-      "id": "frontend-accessibility",
-      "version": "1.0.0",
-      "description": "Accesibilidad web (WCAG). Úsala siempre que crees o modifiques UI, formularios, modales, navegación o componentes interactivos. Verifica teclado, foco, semántica, contraste y lectores de pantalla. No la uses para auditorías legales completas.",
-      "category": "domain",
-      "path": "skills/frontend-accessibility",
-      "tags": [
-        "accessibility",
-        "frontend",
-        "ui"
-      ]
-    },
-    {
-      "id": "frontend-performance",
-      "version": "1.0.0",
-      "description": "Rendimiento web y Core Web Vitals. Úsala cuando una página cargue lenta, el bundle crezca o haya que optimizar LCP, INP o CLS. Mide en condiciones reales antes de cambiar. No la uses para micro- optimizaciones sin datos.",
-      "category": "domain",
-      "path": "skills/frontend-performance",
-      "tags": [
-        "performance",
-        "frontend",
-        "web-vitals"
-      ]
-    },
-    {
-      "id": "frontend-react-architecture",
-      "version": "1.0.0",
-      "description": "Arquitectura de aplicaciones React. Úsala cuando crees componentes, organices carpetas, gestiones estado o dividas responsabilidades. Define límites, estado local vs global y composición antes de escribir. No la uses para detalles visuales o auditorías de accesibilidad.",
-      "category": "domain",
-      "path": "skills/frontend-react-architecture",
-      "tags": [
-        "react",
-        "frontend",
-        "architecture"
-      ]
-    },
-    {
-      "id": "meta-skill-authoring",
-      "version": "1.0.0",
-      "description": "Autoría de skills para Apocryphon. Úsala cuando crees o edites una SKILL.md en este catálogo. Valida frontmatter, triggers, tamaño, categoría, tags y referencias. No la uses para documentación general.",
-      "category": "meta",
-      "path": "skills/meta-skill-authoring",
-      "tags": [
-        "meta",
-        "skills",
-        "authoring"
-      ]
-    },
-    {
-      "id": "nextjs-app-router",
-      "version": "1.0.0",
-      "description": "Next.js App Router. Úsala siempre que crees rutas, layouts, server/client components, data fetching o actions en Next.js. Define caché, revalidación y límites server/client. No la uses para React sin Next.js.",
-      "category": "domain",
-      "path": "skills/nextjs-app-router",
-      "tags": [
-        "nextjs",
-        "react",
-        "frontend"
-      ]
-    },
-    {
-      "id": "node-service-conventions",
-      "version": "1.0.0",
-      "description": "Servicios Node en producción. Úsala siempre que crees o modifiques un servicio, CLI o job en Node. Configura ESM, configuración validada, logs estructurados, apagado graceful y healthchecks. No la uses para scripts de una sola vez.",
-      "category": "domain",
-      "path": "skills/node-service-conventions",
-      "tags": [
-        "node",
-        "backend",
-        "typescript"
-      ]
-    },
-    {
-      "id": "postgres-schema-design",
-      "version": "1.0.0",
-      "description": "Diseño de esquemas PostgreSQL. Úsala siempre que crees o modifiques tablas, tipos, constraints o índices en Postgres. Define claves, nulabilidad, constraints e índices según el acceso. No la uses para otros motores sin revisar diferencias.",
-      "category": "domain",
-      "path": "skills/postgres-schema-design",
-      "tags": [
-        "postgres",
-        "database",
-        "design"
-      ]
-    },
-    {
-      "id": "python-project-conventions",
-      "version": "1.0.0",
-      "description": "Convenciones de proyectos Python modernos. Úsala siempre que crees o revises paquetes, servicios o scripts en Python. Cubre pyproject, ruff, tipos, settings, logging y tests. No la uses para notebooks exploratorios.",
-      "category": "domain",
-      "path": "skills/python-project-conventions",
-      "tags": [
-        "python",
-        "backend",
-        "quality"
-      ]
-    },
-    {
-      "id": "python-tdd-pytest",
-      "version": "1.0.0",
-      "description": "TDD en Python con pytest. Úsala siempre que implementes una feature o corrijas un bug en Python y quieras tests primero. Ciclo red-green-refactor con fixtures, parametrización y cobertura. No la uses para tests E2E de UI.",
-      "category": "workflow",
-      "path": "skills/python-tdd-pytest",
-      "tags": [
-        "python",
-        "tdd",
-        "testing"
-      ]
-    },
-    {
-      "id": "security-code-review",
-      "version": "1.0.0",
-      "description": "Revisión de seguridad de código. Úsala cuando revises PRs que tocan auth, input, SQL, archivos, HTTP o dependencias. Busca inyección, autorización, SSRF, deserialización y secretos. No la uses para revisión de estilo.",
-      "category": "workflow",
-      "path": "skills/security-code-review",
-      "tags": [
-        "security",
         "code-review",
-        "appsec"
-      ]
-    },
-    {
-      "id": "security-threat-model",
-      "version": "1.0.0",
-      "description": "Modelado de amenazas. Úsala siempre que diseñes una feature, API o arquitectura que maneje datos sensibles, dinero o autenticación. Identifica activos, límites de confianza y mitigaciones. No la uses para auditorías de cumplimiento formales.",
-      "category": "domain",
-      "path": "skills/security-threat-model",
-      "tags": [
-        "security",
-        "threat-model",
-        "architecture"
-      ]
-    },
-    {
-      "id": "testing-flaky-tests",
-      "version": "1.0.0",
-      "description": "Diagnóstico de tests intermitentes. Úsala cuando un test falle de forma no determinista o bloquee CI. Reproduce, aísla la fuente de no determinismo y corrige la causa. No la uses para simplemente reintentar o silenciar.",
-      "category": "workflow",
-      "path": "skills/testing-flaky-tests",
-      "tags": [
-        "testing",
-        "flakiness",
-        "quality"
-      ]
-    },
-    {
-      "id": "testing-playwright-e2e",
-      "version": "1.0.0",
-      "description": "Tests E2E con Playwright. Úsala cuando escribas flujos críticos de usuario, formularios o integraciones entre frontend y backend. Usa selectores estables, aislamiento y fixtures. No la uses para lógica unitaria.",
-      "category": "domain",
-      "path": "skills/testing-playwright-e2e",
-      "tags": [
-        "playwright",
-        "testing",
-        "e2e"
-      ]
-    },
-    {
-      "id": "testing-strategy",
-      "version": "1.0.0",
-      "description": "Estrategia de pruebas para un proyecto o feature. Úsala cuando decidas qué tests escribir, cómo estructurarlos o cómo mejorar la confianza sin explotar la suite. Define pirámide, fixtures y criterios. No la uses para escribir un test puntual.",
-      "category": "workflow",
-      "path": "skills/testing-strategy",
-      "tags": [
-        "testing",
-        "quality"
-      ]
-    },
-    {
-      "id": "typescript-strict-patterns",
-      "version": "1.0.0",
-      "description": "TypeScript estricto en Node. Úsala siempre que crees o revises código TypeScript, tipos de dominio o APIs internas. Activa strict, evita `any`, usa uniones discriminadas y validación en runtime. No la uses para snippets de navegador sin build.",
-      "category": "domain",
-      "path": "skills/typescript-strict-patterns",
-      "tags": [
-        "typescript",
-        "node",
-        "quality"
-      ]
-    },
-    {
-      "id": "workflow-atomic-commits",
-      "version": "1.0.0",
-      "description": "Divide el trabajo en commits semánticos atómicos y verifica cada paso. Úsala cuando implementes una tarea ya planificada con varios pasos, cuando el usuario pida commits pequeños o cuando lleves más de tres archivos modificados sin commitear. Cada paso debe compilar, pasar tests y tener un mensaje Conventional Commits. No la uses para exploración sin cambios de código.",
-      "category": "workflow",
-      "path": "skills/workflow-atomic-commits",
-      "tags": [
-        "git",
-        "commits",
-        "discipline"
-      ]
-    },
-    {
-      "id": "workflow-codebase-onboarding",
-      "version": "1.0.0",
-      "description": "Onboarding rápido en un repositorio desconocido. Úsala cuando llegues a un proyecto nuevo o tengas que entender un módulo grande antes de cambiar algo. Mapea entry points, build, tests, convenciones y riesgos. No la uses para documentación exhaustiva ni para refactors.",
-      "category": "workflow",
-      "path": "skills/workflow-codebase-onboarding",
-      "tags": [
-        "onboarding",
-        "workflow",
-        "architecture"
-      ]
-    },
-    {
-      "id": "workflow-dependency-upgrade",
-      "version": "1.0.0",
-      "description": "Actualización segura de dependencias. Úsala cuando haya que subir versiones, resolver vulnerabilidades o actualizar lockfiles. Lee changelogs, actualiza de a una, ejecuta tests y separa commits. No la uses para instalar una librería nueva sin evaluarla.",
-      "category": "workflow",
-      "path": "skills/workflow-dependency-upgrade",
-      "tags": [
-        "dependencies",
-        "workflow",
-        "security"
-      ]
-    },
-    {
-      "id": "workflow-incident-response",
-      "version": "1.0.0",
-      "description": "Respuesta a incidentes en producción. Úsala siempre que un servicio esté caído, degradado o con errores graves en producción. Prioriza estabilizar, comunicar y preservar evidencia antes de investigar. No la uses para bugs locales ni para mantenimiento planificado.",
-      "category": "workflow",
-      "path": "skills/workflow-incident-response",
-      "tags": [
-        "incident",
-        "operations",
-        "workflow"
-      ]
-    },
-    {
-      "id": "workflow-read-only-plan",
-      "version": "1.0.0",
-      "description": "Protocolo de planificación en solo lectura. Úsala siempre que el usuario pida una funcionalidad, un refactor o una corrección no trivial (varios archivos, cambios de arquitectura o migraciones) antes de editar código. Investiga el repositorio, propone fases atómicas con archivos afectados y comando de verificación, y espera aprobación explícita. No la uses para preguntas conceptuales ni para cambios de una línea.",
-      "category": "workflow",
-      "path": "skills/workflow-read-only-plan",
-      "tags": [
-        "planning",
-        "discipline",
-        "read-only"
-      ]
-    },
-    {
-      "id": "workflow-refactor-safely",
-      "version": "1.0.0",
-      "description": "Refactor sin cambiar comportamiento. Úsala siempre que vayas a mover, renombrar, extraer o reestructurar código que ya funciona, o cuando el usuario pida limpiar sin cambiar features. Exige tests de comportamiento, pasos pequeños y commits separados. No la uses para corregir bugs ni para añadir funcionalidad.",
-      "category": "workflow",
-      "path": "skills/workflow-refactor-safely",
-      "tags": [
-        "refactor",
-        "workflow",
-        "quality"
-      ]
-    },
-    {
-      "id": "workflow-release-checklist",
-      "version": "1.0.0",
-      "description": "Checklist de release seguro. Úsala siempre que vayas a publicar una versión, desplegar a producción o cerrar un ciclo de cambios. Verifica árbol limpio, tests, changelog, versionado y plan de rollback. No la uses para incidentes en curso (usa workflow-incident-response).",
-      "category": "workflow",
-      "path": "skills/workflow-release-checklist",
-      "tags": [
-        "release",
-        "workflow",
-        "git",
-        "devops"
-      ]
-    },
-    {
-      "id": "workflow-review-triage",
-      "version": "1.0.0",
-      "description": "Triaje de comentarios de code review. Úsala siempre que el usuario pegue comentarios de PR, hallazgos de auditoría o feedback externo y pida aplicarlos. Contrasta cada hallazgo contra el código real, clasifícalo como Válido, Opcional o Falso positivo en una tabla y espera la selección del usuario antes de editar. No la uses para redactar un review nuevo desde cero.",
-      "category": "workflow",
-      "path": "skills/workflow-review-triage",
-      "tags": [
         "review",
-        "triage",
-        "discipline"
+        "quality"
       ]
     },
     {
-      "id": "workflow-root-cause-debug",
+      "id": "codebase-design",
       "version": "1.0.0",
-      "description": "Protocolo de depuración por causa raíz. Úsala siempre que algo falle y no sepas por qué (tests rojos, errores en runtime, comportamiento extraño) o cuando un intento de arreglo no haya funcionado. Reproduce, aísla, formula hipótesis y verifica antes de cambiar código. No la uses para aplicar una corrección ya conocida ni para mejoras de estilo.",
+      "description": "Design deep modules with clean seams and testable interfaces. Use when designing or improving a module interface, deciding where a seam belongs, making code more testable or AI-navigable, or reviewing an architecture that is becoming shallow. Do not use for visual design, product copy, or one-line implementation changes with no interface decision.",
+      "category": "domain",
+      "path": "skills/codebase-design",
+      "tags": [
+        "architecture",
+        "design",
+        "refactor"
+      ]
+    },
+    {
+      "id": "composition-patterns",
+      "version": "1.0.0",
+      "description": "React composition patterns for flexible component APIs. Use when refactoring components with boolean prop proliferation, building reusable component libraries, designing compound components or context providers, or reviewing component architecture. Do not use for page-level data fetching, CSS-only changes, or React Native components.",
+      "category": "domain",
+      "path": "skills/composition-patterns",
+      "tags": [
+        "react",
+        "frontend",
+        "architecture",
+        "design"
+      ]
+    },
+    {
+      "id": "diagnosing-bugs",
+      "version": "1.0.0",
+      "description": "A disciplined diagnosis loop for hard bugs and performance regressions. Use when the user asks to diagnose or debug something, or reports behavior that is broken, throwing, failing intermittently, or slow. Do not use for applying a fix whose cause is already proven, or for style-only changes.",
       "category": "workflow",
-      "path": "skills/workflow-root-cause-debug",
+      "path": "skills/diagnosing-bugs",
       "tags": [
         "debugging",
         "workflow",
@@ -934,15 +283,203 @@
       ]
     },
     {
-      "id": "workflow-test-first",
+      "id": "differential-review",
       "version": "1.0.0",
-      "description": "Ciclo TDD para features y bugs. Úsala cuando el usuario pida implementar algo verificable o corregir un bug y quieras garantizar cobertura antes del código. Escribe un test que falle, implementa lo mínimo y refactoriza. No la uses para prototipos exploratorios sin criterio de aceptación.",
+      "description": "Security-focused review of PRs, commits, and diffs. Use when reviewing a code change for vulnerabilities, regressions, removed validation, auth or crypto changes, blast radius, or missing test coverage; also use when checking whether a change reintroduces a previously fixed bug. Do not use for greenfield code with no baseline, documentation-only changes, or formatting-only diffs.",
       "category": "workflow",
-      "path": "skills/workflow-test-first",
+      "path": "skills/differential-review",
+      "tags": [
+        "security",
+        "code-review",
+        "appsec"
+      ]
+    },
+    {
+      "id": "domain-modeling",
+      "version": "1.0.0",
+      "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, recording or revising an ADR, or resolving overloaded terms across code and documentation. Do not use for merely reading a glossary, implementation-only refactors, or project management status updates.",
+      "category": "domain",
+      "path": "skills/domain-modeling",
+      "tags": [
+        "architecture",
+        "design",
+        "docs",
+        "adr"
+      ]
+    },
+    {
+      "id": "dotnet-run-tests",
+      "version": "1.0.0",
+      "description": "Choose and run the correct .NET test command for a repository. Use when running or explaining dotnet tests, including filtered runs, single projects, xUnit v2/v3, MSTest, NUnit, TUnit, VSTest vs Microsoft Testing Platform, coverage, TRX, diagnostics, crash dumps, or hang dumps. Do not use for identifying the platform alone, writing test code, or migrating a test framework.",
+      "category": "workflow",
+      "path": "skills/dotnet-run-tests",
+      "tags": [
+        "dotnet",
+        "testing",
+        "quality"
+      ]
+    },
+    {
+      "id": "dotnet-webapi",
+      "version": "1.0.0",
+      "description": "Create and modify ASP.NET Core Web API endpoints with correct HTTP semantics, DTOs, OpenAPI metadata, and error handling. Use when working with Minimal APIs or controllers in .NET, request and response types, OpenAPI wiring, centralized error handling, or .http test files. Do not use for general C# style, EF Core query optimization, Blazor, gRPC, or SignalR.",
+      "category": "domain",
+      "path": "skills/dotnet-webapi",
+      "tags": [
+        "dotnet",
+        "csharp",
+        "api",
+        "http",
+        "backend"
+      ]
+    },
+    {
+      "id": "modern-python",
+      "version": "1.0.0",
+      "description": "Configure Python projects with modern tooling and secure defaults. Use when creating a Python project or package, writing standalone scripts with dependencies, setting up pyproject.toml, configuring uv, ruff, ty, pytest, or pre-commit tooling, or migrating from pip, Poetry, mypy, black, and isort. Do not use for exploratory notebooks, non-Python projects, or repositories whose maintainers require legacy tooling.",
+      "category": "domain",
+      "path": "skills/modern-python",
+      "tags": [
+        "python",
+        "quality",
+        "backend"
+      ]
+    },
+    {
+      "id": "next-dev-loop",
+      "version": "1.0.0",
+      "description": "Verify Next.js runtime behavior after editing app code. Use when a change must be confirmed in a running Next.js app, not just compiled or typechecked, and when the project has a running next dev server with the Next.js MCP endpoint and agent-browser available. Do not use for projects below Next.js 16.3, webpack-only dev setups, or changes that can be fully verified by a unit test.",
+      "category": "workflow",
+      "path": "skills/next-dev-loop",
+      "tags": [
+        "nextjs",
+        "frontend",
+        "e2e",
+        "testing"
+      ]
+    },
+    {
+      "id": "postgres-best-practices",
+      "version": "1.0.0",
+      "description": "Postgres schema, query, locking, connection, and security practices for PostgreSQL running anywhere. Use when creating or changing tables, indexes, constraints, migrations, RLS policies, SQL functions, or queries, or when diagnosing slow queries, timeouts, lock contention, bloat, or connection exhaustion. Do not use for other database engines without checking their differences.",
+      "category": "domain",
+      "path": "skills/postgres-best-practices",
+      "tags": [
+        "postgres",
+        "database",
+        "performance",
+        "security"
+      ]
+    },
+    {
+      "id": "property-based-testing",
+      "version": "1.0.0",
+      "description": "Write, review, and debug property-based tests. Use when tests should cover a whole input domain instead of a hand-picked list: encode/decode pairs, parsers, canonicalizers, validators, numeric types, comparators, data structures, or invariants. Also use when judging whether existing property tests assert anything real or when a generator shrunk a counterexample. Do not use for coverage-guided binary fuzzing, mutation-testing campaigns, static analysis, benchmarking, or end-to-end UI tests.",
+      "category": "workflow",
+      "path": "skills/property-based-testing",
       "tags": [
         "testing",
+        "property-based-testing",
+        "quality"
+      ]
+    },
+    {
+      "id": "react-best-practices",
+      "version": "1.0.0",
+      "description": "Performance and correctness rules for React and Next.js from Vercel Engineering. Use when writing, reviewing, or refactoring React components, Next.js pages, data fetching, bundle boundaries, or rendering behavior, and when investigating waterfalls, bundle size, or re-render costs. Do not use for React Native, non-React UI frameworks, or performance work without a React component in scope.",
+      "category": "domain",
+      "path": "skills/react-best-practices",
+      "tags": [
+        "react",
+        "frontend",
+        "performance",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "receiving-code-review",
+      "version": "1.0.0",
+      "description": "Evaluate code review feedback before implementing it. Use when the user pastes PR comments, audit findings, or external reviewer suggestions and asks to apply them, especially when feedback is unclear, conflicting, or technically questionable. Do not use for writing a fresh review from scratch or for applying a change the user has already fully specified.",
+      "category": "workflow",
+      "path": "skills/receiving-code-review",
+      "tags": [
+        "code-review",
+        "review",
+        "discipline"
+      ]
+    },
+    {
+      "id": "tdd",
+      "version": "1.0.0",
+      "description": "Test-driven development for features and bug fixes. Use when the user asks for TDD, red-green-refactor, test-first implementation, integration tests, or behavior-focused tests, and when a change needs a regression test before the implementation. Do not use for exploratory spikes, throwaway prototypes, or changes with no observable behavior to pin down.",
+      "category": "workflow",
+      "path": "skills/tdd",
+      "tags": [
         "tdd",
-        "workflow"
+        "testing",
+        "quality"
+      ]
+    },
+    {
+      "id": "using-git-worktrees",
+      "version": "1.0.0",
+      "description": "Isolate feature work in a Git worktree before implementation or plan execution. Use when starting work that needs isolation from the current workspace, when parallel branches would collide, or when the harness offers a native worktree tool. Do not use when the user explicitly wants to work in place, or when the repository is not a Git checkout.",
+      "category": "workflow",
+      "path": "skills/using-git-worktrees",
+      "tags": [
+        "git",
+        "workflow",
+        "discipline"
+      ]
+    },
+    {
+      "id": "verification-before-completion",
+      "version": "1.0.0",
+      "description": "Require fresh evidence before claiming work is complete, fixed, or passing. Use when about to commit, open a PR, hand work to another agent, or say a test, build, linter, or requirement is satisfied. Do not use for interim progress updates that make no completion claim.",
+      "category": "workflow",
+      "path": "skills/verification-before-completion",
+      "tags": [
+        "discipline",
+        "quality",
+        "testing"
+      ]
+    },
+    {
+      "id": "web-interface-guidelines",
+      "version": "1.0.0",
+      "description": "Review UI code against Vercel's Web Interface Guidelines. Use when asked to review UI, check accessibility, audit design or UX, or verify forms, navigation, animation, typography, images, and interactive states against current web interface rules. Do not use for backend-only changes, mobile native UI, or visual design work with no interface code to inspect.",
+      "category": "domain",
+      "path": "skills/web-interface-guidelines",
+      "tags": [
+        "frontend",
+        "accessibility",
+        "ui",
+        "design"
+      ]
+    },
+    {
+      "id": "writing-for-agents",
+      "version": "1.0.0",
+      "description": "Write documents that coding agents consume predictably. Use when creating or editing a skill, AGENTS.md, CLAUDE.md, or a document reached by a context pointer, and when an agent ignores, over-reads, or misapplies an instruction file. Do not use for human marketing copy, API reference generated from code, or release notes with no agent-facing component.",
+      "category": "meta",
+      "path": "skills/writing-for-agents",
+      "tags": [
+        "skills",
+        "authoring",
+        "docs",
+        "meta"
+      ]
+    },
+    {
+      "id": "writing-plans",
+      "version": "1.0.0",
+      "description": "Write implementation plans that another engineer or agent can execute without guessing. Use when a spec or set of requirements exists for a multi-step task and code has not been touched yet, especially when the work spans several files, interfaces, or commits. Do not use for one-line changes, open-ended brainstorming, or exploration with no implementation target.",
+      "category": "workflow",
+      "path": "skills/writing-plans",
+      "tags": [
+        "planning",
+        "workflow",
+        "discipline"
       ]
     }
   ]
